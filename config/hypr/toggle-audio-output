@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+sinks=$(pactl list short sinks)
+current=$(pactl get-default-sink)
+
+monitor=$(awk '$2 ~ /hdmi|monitor/ { print $2; exit }' <<<"$sinks")
+headphones=$(awk '$2 ~ /headphone|headset|analog-stereo/ { print $2; exit }' <<<"$sinks")
+
+if [[ -z "$monitor" || -z "$headphones" ]]; then
+    notify-send "Audio output toggle" "Could not find both monitor and headphone outputs."
+    exit 1
+fi
+
+if [[ "$current" == "$monitor" ]]; then
+    pactl set-default-sink "$headphones"
+else
+    pactl set-default-sink "$monitor"
+fi
