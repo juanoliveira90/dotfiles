@@ -1,0 +1,25 @@
+/* Palette */
+@define-color white        #ffffff;
+@define-color gray-5       #e6e6e6;
+@define-color gray-4       #c9c9c9;
+@define-color gray-3       #a3a3a3;
+@define-color gray-2       #707070;
+@define-color gray-1       #454545;
+@define-color gray-0       #2a2a2a;
+
+/* Base colors */
+@define-color accent       @white;
+@define-color fg           @gray-5;
+@define-color bg-0         #000000;
+@define-color bg-1         #121212;
+@define-color bg-2         #1e1e1e;
+@define-color bg-3         #303030;
+@define-color br           @gray-3;
+@define-color shadow       shade(@bg-0, 0.75);
+
+/* States */
+@define-color warning      @gray-3;
+@define-color critical     @white;
+@define-color charging     @white;
+@define-color hover-bg     @bg-2;
+@define-color hover-fg     alpha(@fg, 0.75);

@@ -1,0 +1,44 @@
+{
+	"mode": "dock",
+	"position": "top",
+	"layer": "top",
+	"width": 0,
+	"height": 0,
+	"margin": 0,
+	"spacing": 10,
+	"fixed-center": true,
+	"reload_style_on_change": true,
+
+	"include": [
+		"~/.config/waybar/modules/custom/*.jsonc",
+		"~/.config/waybar/modules/hyprland/*.jsonc",
+		// "~/.config/waybar/modules/optional/*.jsonc",
+		"~/.config/waybar/modules/*.jsonc"
+	],
+
+	"modules-left": [
+		"custom/user",
+		"clock#time",
+		"hyprland/workspaces",
+		"temperature"
+	],
+
+	"modules-center": [
+		"custom/distro"
+	],
+
+	"modules-right": [
+		"mpris",
+		"memory",
+		"cpu",
+		"idle_inhibitor",
+		"network",
+		"bluetooth",
+		//"custom/update",
+		"group/pulseaudio",
+		"backlight",
+		"battery",
+		"clock#date",
+		"custom/power"
+	]
+}

@@ -1,0 +1,39 @@
+/* Left modules */
+
+#custom-user {
+	padding: 0 12px;
+}
+
+#workspaces {
+	padding: 0 1px;
+}
+
+#keyboard-state label,
+#language {
+	padding: 0 12px 0 8px;
+	font-weight: normal;
+	color: @hover-fg;
+}
+
+/* Center modules */
+
+#custom-distro {
+	padding: 0 8px 0 4px;
+	color: @accent;
+}
+
+/* Right modules */
+
+#mpris {
+	padding: 0 12px;
+	font-weight: normal;
+}
+
+#custom-power {
+	padding: 0 15px 0 12px;
+	color: @accent;
+}
+
+#clock-time {
+	margin-left: 20px;
+}
